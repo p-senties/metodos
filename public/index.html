@@ -1,0 +1,112 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Polinomio de Newton</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para una mejor tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos del acordeón -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" defer></script>
+    <!-- Tu script personalizado -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Proyecto Métodos Numéricos</h1>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Carrusel de Imágenes de Fondo -->
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="og/imagen1.png" alt="Imagen 1" class="active">
+                <img src="og/imagen2.png" alt="Imagen 2">
+                <!--img src="images/imagen3.png" alt="Imagen 3"-->
+            </div>
+        </div>
+
+        <!-- Acordeón -->
+        <div class="accordion">
+            <!-- Sección 1: Polinomio de Newton -->
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>Polinomio de Newton</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        El <strong>Polinomio de Newton</strong> es una forma de interpolación que permite construir un polinomio que pasa exactamente por un conjunto dado de puntos conocidos. La interpolación polinómica es esencial cuando se desea estimar valores intermedios entre los puntos de datos existentes o cuando se requiere una representación continua de datos discretos.
+                    </p>
+                </div>
+            </div>
+            <!-- Sección 1.5: Polinomio de Newton aplicado -->
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>¿Cómo usamos el Polinomio de Newton?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        <strong>Entrada de Datos:</strong> El usuario ingresa un conjunto de puntos conocidos.<br>
+                        <strong>Cálculo del Polinomio de Newton:</strong> Diferencias Divididas: La aplicación utiliza las diferencias divididas para calcular los coeficientes del polinomio.<br>
+                        <strong>Evaluación del Polinomio:</strong> Estimación del Valor de \( y \): Utilizando el polinomio construido, la aplicación evalúa el valor de \( y \) en el punto \( x \) especificado por el usuario.<br>
+                        <strong>Visualización Gráfica:</strong> Gráfica del Polinomio: La aplicación genera una gráfica que muestra el polinomio de Newton junto con los puntos de datos originales.<br>
+                    </p>
+                </div>
+            </div>
+            <!-- Sección 2: Equipo -->
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>Equipo</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Pablo Alejandro Gómez Sentíes</li>
+                        <li>Donovan Daniel Ortíz González</li>
+                        <li>Sebastián Gomez Navarrete</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sección 3: Polinomio Funcional -->
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>Polinomio Funcional</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="form-container">
+                        <form id="newtonForm">
+                            <div class="form-group">
+                                <label for="xPoints">Puntos X (separados por comas):</label>
+                                <input type="text" id="xPoints" required placeholder="Ejemplo: 6,9,12,15">
+                            </div>
+                            <div class="form-group">
+                                <label for="yPoints">Puntos Y (separados por comas):</label>
+                                <input type="text" id="yPoints" required placeholder="Ejemplo: 15,18,25,22">
+                            </div>
+                            <div class="form-group">
+                                <label for="xEval">Valor de X a Evaluar:</label>
+                                <input type="number" id="xEval" required step="any" placeholder="Ejemplo: 10.5">
+                            </div>
+                            <button type="submit">Calcular</button>
+                        </form>
+                        <div id="resultado" class="resultado"></div>
+                        <!-- Canvas para la gráfica -->
+                        <canvas id="polynomialChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Proyecto Métodos Numéricos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

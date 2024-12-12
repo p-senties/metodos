@@ -1,0 +1,14 @@
+{
+  "name": "polinomio-newton-app",
+  "version": "1.0.0",
+  "description": "Aplicación para evaluar el polinomio de Newton",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pkg": "^5.8.1"
+  }
+}
